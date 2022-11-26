@@ -1,0 +1,39 @@
+.landingPage {
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url(https://images7.alphacoders.com/592/592678.jpg);
+  background-size: cover;
+  opacity: 0.9;
+  background-position: center 85%;
+}
+
+.pokeBoton {
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/481px-Pokebola-pokeball-png-0.png);
+    background-size: cover;
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    background-position: center center;
+    position: absolute;
+    right: 150px;
+    top: 250px;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.pokeBoton:hover {
+    cursor: pointer;
+    width: 135px;
+    height: 135px;
+    transition: 0.5s; 
+}
+
+.enter {
+  position: absolute;
+  right: 160px;
+  top: 175px;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #ffcb05;
+  -webkit-text-stroke: 1.5px black
+}

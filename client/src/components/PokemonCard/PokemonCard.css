@@ -1,0 +1,61 @@
+/* import { CardContainer, PokeName, PokeType, PokeTypeContainer } from '../Styled';
+
+// *********** CONTENEDOR DE LA POKEMON CARD **********************************************************************
+export const CardContainer = styled.div`
+
+// *********** ESTILOS DEL 'NAME' EN LAS POKEMON CARDS **********************************************************************
+export const PokeName = styled.p`
+
+// *********** ESTILOS DEL 'TYPE' EN LAS POKEMON CARDS **********************************************************************
+export const PokeType = styled.p`
+
+// *********** ESTILOS PARA EL CONTENEDOR DEL 'TYPE' EN LAS POKEMON CARDS **********************************************************************
+export const PokeTypeContainer = styled.div`
+` */
+
+.cardContainer {
+    border: none;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 225px;
+    height: 250px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.2);
+}
+
+.cardContainer:hover {
+    transform: translateY(-0.7rem);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.35);
+    transition: all 0.4s;
+    cursor: pointer;
+}
+
+.pokeName {
+    background-color: #ffcb05bb;
+    border-radius: 25px;
+    margin: 0;
+    width: 90%;
+    color: #2a75bb;;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.pokeType {
+    background-color: #3c5aa6cc;
+    margin: 0;
+    width: 100%;
+    height: 35px;
+    color: #ffcb05bb;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 30px;
+}
+
+.pokeTypeContainer {
+    margin: 0;
+    display: flex;
+    width: 100%;
+}

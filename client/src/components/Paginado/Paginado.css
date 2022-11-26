@@ -1,0 +1,26 @@
+.paginadoContainer {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.paginadoBotonContainer {
+    width: 135px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.paginadoBoton {
+    background-color: #ffcb05dd;
+    border: 2px solid #2a75bb;
+    color: #2a75bb;
+    font-weight: bold;
+}
+
+.paginadoBoton:hover {
+    transform: translateY(-0.25rem);
+    transition: all 0.4s;
+    cursor: pointer;
+}
