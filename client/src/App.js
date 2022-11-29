@@ -5,6 +5,9 @@ import Home from './components/Home/Home'
 import About from './components/About/About';
 import PokemonDetail from './components/PokemonDetail/PokemonDetail'
 import PokemonCreate from './components/PokemonCreate/PokemonCreate';
+import axios from "axios"
+
+axios.defaults.baseURL = "https://pokemon-production-14e7.up.railway.app/"
 
 function App() {
   return (
