@@ -6,14 +6,13 @@ const { pokemonFetchById, pokemonFetchByName, idAumentor, showPokemon } = requir
 pokeRouter.get("/", async (req, res) => {   
     const { name } = req.query
     if(!name){ // SI NO HAY NAME MOSTRÁ LA INFO DE LA RUTA PRINCIPAL DE LOS PRIMEROS 12 POKEMONS
-        try {         
+        try {          
             const funPokemon = idAumentor()
             const llamados = funPokemon.map(id => pokemonFetchById(id))
 
             const busqueda = await Pokemon.findAll({include:[{model:Type, attributes: ["name"], through: { attributes: [] }}]})
             busqueda.forEach(e => {
                 let newArr = e.dataValues.types.map(element => element.name)
-                console.log(newArr); 
                 e.dataValues.types = newArr.join(", ");
             })   
 
