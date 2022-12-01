@@ -7,7 +7,9 @@ import PokemonDetail from './components/PokemonDetail/PokemonDetail'
 import PokemonCreate from './components/PokemonCreate/PokemonCreate';
 import axios from "axios"
 
-axios.defaults.baseURL = "https://pokemon-production-14e7.up.railway.app/"
+// SE LE AVISA A AXIOS QUE TODAS LAS PETICIONES QUE SE HAGAN EMPIECEN UNA MISMA BASE URL
+// axios.defaults.baseURL = "http://localhost:3001"
+// axios.defaults.baseURL = "https://pokemon-production-07b2.up.railway.app"
 
 function App() {
   return (
