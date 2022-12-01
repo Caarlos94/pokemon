@@ -13,7 +13,7 @@ const router = Router();
 router.use('/pokemons', pokeRouter);
 
 router.get("/types", async (req, res) => { 
-    try { 
+    try {  
         const fn = await getType()
         const typesArr = fn.results.map(type => type.name)
         console.log(typesArr);
