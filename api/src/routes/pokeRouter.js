@@ -9,13 +9,13 @@ pokeRouter.get("/", async (req, res) => {
         try {          
             const funPokemon = idAumentor()
             const llamados = funPokemon.map(id => pokemonFetchById(id))
-
+   
             const busqueda = await Pokemon.findAll({include:[{model:Type, attributes: ["name"], through: { attributes: [] }}]})
             busqueda.forEach(e => {
                 let newArr = e.dataValues.types.map(element => element.name)
                 e.dataValues.types = newArr.join(", ");
             })   
-
+ 
             Promise.all(llamados) 
             .then(values => values.map(element => {
                 let types = element.types.map(tipo => tipo.type.name)
@@ -25,7 +25,7 @@ pokeRouter.get("/", async (req, res) => {
                     attack: element.stats[1].base_stat,
                     img: element.sprites.other.home.front_default,
                     types: types
-                }     
+                }      
             }))  
             .then(values => res.status(200).json(values.concat(busqueda))) 
         } catch (error) {

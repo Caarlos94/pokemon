@@ -10,6 +10,7 @@ const OrderBar = ({ setPage, setRender }) => {
 
   const handleFilterByType = (event) => {
     dispatch(filterByType(event.target.value))
+    console.log(event.target.value);
     setRender(event.target.value);
     setPage(1)
   };

@@ -21,19 +21,19 @@ const validate = (value, pokemons) => {
     errors.life = "La vida debe tener un valor entre 1-500";
  }
  if(value.attack) {
-  if (value.attack < 1 || value.attack > 750 || !Number.isInteger(parseFloat(value.life)))
+  if (value.attack < 1 || value.attack > 750 || !Number.isInteger(parseFloat(value.attack)))
     errors.attack = "El ataque debe ser tener un valor entre 1-750";
  }
  if(value.defense) {
-  if (value.defense < 1 || value.defense > 750 || !Number.isInteger(parseFloat(value.life)))
+  if (value.defense < 1 || value.defense > 750 || !Number.isInteger(parseFloat(value.defense)))
     errors.defense = "La defensa debe tener un valor entre 1-750";
  }
  if(value.speed) {
-  if (value.speed < 1 || value.speed > 500 || !Number.isInteger(parseFloat(value.life)))
+  if (value.speed < 1 || value.speed > 500 || !Number.isInteger(parseFloat(value.speed)))
     errors.speed = "La velocidad debe tener un valor entre 1-500";
  }
  if(value.height) {
-  if (value.height <= 0 || value.height > 50 || !Number.isInteger(parseFloat(value.life)))
+  if (value.height <= 0 || value.height > 50 || !Number.isInteger(parseFloat(value.height)))
     errors.height = "La altura debe tener un valor entre 1-50";
  }
  if(value.weight) {
