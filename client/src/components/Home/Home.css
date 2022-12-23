@@ -1,9 +1,18 @@
 .cardsContainer {
     width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+}
+
+.containerCard{
+    margin: 0 auto;
+    padding: 0 5rem;
+}
+
+.cardsContainer a{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    row-gap: 30px;
+    align-items: center;
+    justify-content: center;
 }
 
 .homeContainer {

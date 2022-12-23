@@ -6,9 +6,7 @@ const Main = () => {
     return(
         <>  
             <div className="landingPage">
-                <p className="enter">Entrar</p>
-                <Link to ="/home">
-                    <button className="pokeBoton"></button>
+                    <Link className="pokeBoton" to ="/home">
                 </Link>
             </div>
         </>

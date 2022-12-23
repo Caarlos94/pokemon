@@ -49,7 +49,7 @@ const Home = () => {
         <NavBar></NavBar>
 
         {/* SE RENDERIZA LA IMAGEN DEL TÍTULO */}
-        <img src={pokeTitulo} alt="imagen" width={"350px"}></img>
+        <img src={pokeTitulo} alt="imagen" width={"500px"}></img>
 
         {/* SE RENDERIZA LA SEARCHBAR */}
         <SearchBar 
@@ -73,6 +73,7 @@ const Home = () => {
         ></Paginado>
 
         {/* SE RENDERIZAN LAS TARJETAS POKEMON */}
+        <div className="containerCard">
         <div className="cardsContainer">
         {error ? (
             <div>
@@ -95,6 +96,7 @@ const Home = () => {
             </div>
           )
         }
+        </div>
         </div>
       
       </div>
