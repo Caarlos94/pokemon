@@ -50,7 +50,7 @@ const showPokemon = (pokemon) => {
 
 let idAumentor = () => {
     let arr = []
-    for (let i=1; i<=40; i++){
+    for (let i=1; i<=48; i++){
       arr.push(i)
     }
     return arr

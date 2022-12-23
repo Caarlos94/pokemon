@@ -128,7 +128,7 @@ const PokemonCreate = () => {
         <form className="form" onSubmit={(event) => handleSubmit(event)}>
 
           <div>
-            <label htmlFor="name">Nombre</label>
+            <label htmlFor="name">Nombre:</label>
             <InputCreate
               className={(error.name) ?"error" :"notError"}
               autoComplete="off"
@@ -142,7 +142,7 @@ const PokemonCreate = () => {
           {error.name && <p className="pStyled">{error.name}</p>}
           
           <div>
-            <label htmlFor="life">Vida</label>
+            <label htmlFor="life">Vida:</label>
             <InputCreate
               className={(error.life) ?"error" :"notError"}
               type="number"
@@ -156,7 +156,7 @@ const PokemonCreate = () => {
 
 
           <div>
-            <label htmlFor="attack">Ataque</label>
+            <label htmlFor="attack">Ataque:</label>
             <InputCreate
               className={(error.attack) ?"error" :"notError"}
               type="number"
@@ -169,7 +169,7 @@ const PokemonCreate = () => {
           {error.attack && <p className="pStyled">{error.attack}</p>}
 
           <div>
-            <label htmlFor="defense">Defensa</label>
+            <label htmlFor="defense">Defensa:</label>
             <InputCreate
               className={(error.defense) ?"error" :"notError"}
               type="number"
@@ -182,7 +182,7 @@ const PokemonCreate = () => {
           {error.defense && <p className="pStyled">{error.defense}</p>}
 
           <div>
-            <label htmlFor="speed">Velocidad</label>
+            <label htmlFor="speed">Velocidad:</label>
             <InputCreate
               className={(error.speed) ?"error" :"notError"}
               type="number"
@@ -195,7 +195,7 @@ const PokemonCreate = () => {
           {error.speed && <p className="pStyled">{error.speed}</p>}
 
           <div>
-            <label htmlFor="height">Altura</label>
+            <label htmlFor="height">Altura:</label>
             <InputCreate
               className={(error.height) ?"error" :"notError"}
               type="number"
@@ -208,7 +208,7 @@ const PokemonCreate = () => {
           {error.height && <p className="pStyled">{error.height}</p>}
 
           <div>
-            <label htmlFor="weight">Peso</label>
+            <label htmlFor="weight">Peso:</label>
             <InputCreate
               className={(error.weight) ?"error" :"notError"}
               type="number"
@@ -221,7 +221,7 @@ const PokemonCreate = () => {
           {error.weight && <p className="pStyled">{error.weight}</p>}
 
           <div>
-            <label htmlFor="img">Imagen</label>
+            <label htmlFor="img">Imagen:</label>
             <InputCreate
               className={(error.img) ?"error" :"notError"}
               type="url"
@@ -266,7 +266,7 @@ const PokemonCreate = () => {
 
       <div>
           <Link to ="/home">
-            <button className="containerBoton">Home</button>
+            <button className="containerBoton botonHome">Home</button>
           </Link>
       </div>
 

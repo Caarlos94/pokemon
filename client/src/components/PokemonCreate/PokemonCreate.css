@@ -5,12 +5,27 @@
 }
 
 .pokemonDetailStyled {
-    background-color: #3c5aa6cc;
+    background-color: #2149b0bb;
     width: 100%;
     height: 65px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 3rem;
+}
+
+.form label {
+    font-size: 1.3rem;
+}
+
+.form input {
+    height: 1.25rem;
+    margin-left: 0.5rem;
+}
+
+.form div {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .pokemonDetailTitle {
@@ -19,19 +34,10 @@
     font-size: 2rem;
 }
 
-.orderBoton {
-    border: 2px solid #3c5aa6;
-    cursor: pointer;
-}
-
-.orderBoton:hover {
-    border: 2px solid #ffcb05bb;
-    transition: all 0.3s;
-}
-
 .containerBoton {
     border: 2px solid #3c5aa6;
     cursor: pointer;
+    font-size: 1.1rem;
 }
 
 .containerBoton:hover {
@@ -40,12 +46,16 @@
 }
 
 .form {
-  width: 100%;
+  width: 250px;
+}
+
+.botonHome {
+    margin-top: 3rem;
 }
 
 .formContainer {
-    width: 350px;
-    margin: 18px auto;
+    width: 400px;
+    margin: 0 auto;
     background-color: white;
     display: flex;
     justify-content: center;
@@ -53,13 +63,6 @@
     border-radius: 1rem;
     padding: 0.4rem;
 }
-
-/* .inputCreate {
-    cursor: pointer;
-    margin: 5px;
-    background-color: #00000022;
-    border-radius: 6px;
-} */
 
 .imputCreate:focus {
     outline: none;
@@ -70,6 +73,7 @@
     justify-content: center;
     align-items: center;
     column-gap: 0.75rem;
+    margin: 0.75rem 0;
 }
 
 .error{

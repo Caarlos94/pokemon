@@ -70,10 +70,10 @@ const Home = () => {
             pokemons={pokemons.length}
             pokesPerPage={pokesPerPage}
             fnPaginado={fnPaginado}
+            page={page}
         ></Paginado>
 
         {/* SE RENDERIZAN LAS TARJETAS POKEMON */}
-        <div className="containerCard">
         <div className="cardsContainer">
         {error ? (
             <div>
@@ -96,7 +96,6 @@ const Home = () => {
             </div>
           )
         }
-        </div>
         </div>
       
       </div>

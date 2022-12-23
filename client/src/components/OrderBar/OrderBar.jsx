@@ -34,7 +34,6 @@ const OrderBar = ({ setPage, setRender }) => {
   };
 
   return (
-    <>
       <div className='containerOrder'>
         <div className='containerOrderSearch'>
           <div>
@@ -91,7 +90,6 @@ const OrderBar = ({ setPage, setRender }) => {
         </div>
 
       </div>
-    </>
   );
 };
 

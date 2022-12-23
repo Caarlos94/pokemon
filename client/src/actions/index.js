@@ -46,7 +46,7 @@ export const getPokemonDetail = (id) => {
 
 export const createPokemon = (dataForm) => {
     return function (dispatch){
-        fetch('http://localhost:3001/pokemons', {
+        fetch('http://localhost:3003/pokemons', {
             method:"POST",
             headers:{
                 "Content-Type":"application/json",

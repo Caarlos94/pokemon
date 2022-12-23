@@ -1,8 +1,7 @@
 .containerOrder {
-    margin-top: 18px;
     background-color: #3c5aa6ee;
     width: 100%;
-    height: 50px;
+    height: 60px;
 }
 
 .containerOrderSearch {
@@ -15,6 +14,7 @@
 .orderBoton {
     border: 2px solid #3c5aa6;
     cursor: pointer;
+    font-size: 1.25rem;
 }
 
 .orderBoton:hover {

@@ -6,7 +6,7 @@ const About = () => {
     return (
       <div className="aboutPage">
         <div className="containerAbout">
-          <h3 className="titulo">Bienvenid@ al PI de Pokemon!!!</h3>
+          <h2 className="titulo">¡Bienvenid@ al PI de Pokemon!</h2>
           <p className="textoAbout">
             Esta App fue desarrollada como Proyecto Individual consumiendo
             la <a target="_blank" className="enlaceAbout" rel="noreferrer" href="https://pokeapi.co/">PokeApi</a> y utilizando las tecnologías 

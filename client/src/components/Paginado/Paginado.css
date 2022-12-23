@@ -1,13 +1,12 @@
 .paginadoContainer {
-    margin-bottom: 20px;
-    margin-top: 20px;
+    margin: 20px 0;
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
 .paginadoBotonContainer {
-    width: 135px;
+    width: 200px;
     display: flex;
     justify-content: space-evenly;
 }
@@ -17,10 +16,23 @@
     border: 2px solid #2a75bb;
     color: #2a75bb;
     font-weight: bold;
+    font-size: 1.25rem;
+    width: 2rem;
+    height: 2rem;
 }
 
 .paginadoBoton:hover {
     transform: translateY(-0.25rem);
     transition: all 0.4s;
     cursor: pointer;
+}
+
+.botonSelect {
+    background-color: #2a75bb;
+    border: 2px solid #ffcb05dd;
+    color: #ffcb05dd;
+    font-weight: bold;
+    font-size: 1.25rem;
+    width: 2rem;
+    height: 2rem;
 }
