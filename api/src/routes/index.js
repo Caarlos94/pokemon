@@ -16,7 +16,7 @@ router.get("/types", async (req, res) => {
     try {  
         const fn = await getType()
         const typesArr = fn.results.map(type => type.name)
-        console.log(typesArr);
+        // console.log(typesArr);
         typesArr.forEach(async (tipo) => {
               await Type.findOrCreate({where: {name: tipo}})
         }) 

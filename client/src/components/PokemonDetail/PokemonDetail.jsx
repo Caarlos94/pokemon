@@ -25,11 +25,11 @@ const PokemonDetail = (props) => {
       
       { (pokemonDetail.name) ?(
       <div className="detailContainer">
-        <div className="detailContainerLeft">
+        <div>
           <img src={pokemonDetail.img} alt="pokemon" width={"350px"}></img>
         </div>
 
-        <div className="detailContainerCenter">
+        <div>
             <h2 className="tituloEstadisticas">Estadisticas</h2>
             <p className="pokeNameDetail">{`Nombre: ${pokemonDetail.name}`}</p>
             <p className="pokeNameDetail">{`Id: ${pokemonDetail.id}`}</p>
@@ -41,8 +41,8 @@ const PokemonDetail = (props) => {
             <p className="pokeNameDetail">{`Peso: ${pokemonDetail.weight}`}</p>
         </div>
 
-        <div className="detailContainerRight">
-        <h2 className="tituloEstadisticas">Tipos</h2>
+        <div>
+        <h2 className="tituloEstadisticas">Tipo</h2>
 
         { (pokemonDetail.types) ?(pokemonDetail.types.map((type) => {
             return <p className="pokeNameDetail" key={type}>{type}</p>;

@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <>
     <div className="footerContainer">
-      <a href="https://twitter.com/CarlosIs5294" target="_blank" rel="noreferrer" className="footerText">Carlos Islas López</a>
+      <a href="" target="_blank" rel="noreferrer" className="footerText">© 2022 PokeApp</a>
     </div>
     </>
   );

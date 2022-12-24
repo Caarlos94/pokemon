@@ -76,7 +76,7 @@ const Home = () => {
         {/* SE RENDERIZAN LAS TARJETAS POKEMON */}
         <div className="cardsContainer">
         {error ? (
-            <div>
+            <div className="psyduck">
               <h2>No se encontraron coincidencias</h2>
               <img src={Psyduck} alt="imagen" width={"200px"}></img>
             </div> ) 

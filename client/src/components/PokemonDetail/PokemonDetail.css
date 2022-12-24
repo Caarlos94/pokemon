@@ -13,25 +13,16 @@
     font-size: 2rem;
 }
 
-.detailContainerCenter {
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-}
-
-.detailContainerLeft {
-    width: 40%;
-}
-
-.detailContainerRight {
-    width: 30%;
+.detailContainer img {
+    width: 300px;
+    height: 350px;
 }
 
 .detailContainer {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
+    width: 1200px;
+    margin: 5rem auto;
+    display: grid;
+    grid-template-columns: repeat(3, 33.3%);
 }
 
 .principalContainer {
@@ -43,11 +34,11 @@
 .pokeNameDetail {
     background-color: #ffcb05bb;
     border-radius: 25px;
-    width: 70%;
+    width: 85%;
     color: #2a75bb;
-    font-size: 1rem;
-    font-weight: 700;
-    margin: 7px auto;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 12px auto;
 }
 
 .tituloEstadisticas {
@@ -58,6 +49,7 @@
 .containerBotonDetail {
     border: 2px solid #3c5aa6;
     cursor: pointer;
+    font-size: 1.25rem;
 }
 
 .containerBotonDetail:hover {

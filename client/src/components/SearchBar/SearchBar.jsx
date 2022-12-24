@@ -23,14 +23,14 @@ const SearchBar = ({ setRender, setPage }) => {
 
   const handleClick = () => {
     dispatch(showAll())
-    setRender("")
     dispatch(emptyError())
+    setRender("")
   };
 
    return (
        <div className='containerSearch'>
+         <button className='containBoton' type="submit" onClick={() => handleClick()}>Todos</button>
          <form onSubmit={(event) => handleSubmit(event)}>
-         <button className='containBoton' type="submit" onClick={(event) => handleClick(event)}>Todos</button>
            <input className='input' type="text" autoComplete="off" value={name} placeholder="Nombre" onChange={(event) => handleChange(event)}></input>
           <button className='containBoton' type="submit">Buscar</button>
           <Link to = {"/createPokemon"}>

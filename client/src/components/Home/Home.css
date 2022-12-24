@@ -22,3 +22,7 @@
     background-size: cover;
     padding-bottom: 25px;
 }
+
+.psyduck {
+    grid-column: span 4;
+}
