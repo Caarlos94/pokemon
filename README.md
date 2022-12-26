@@ -13,7 +13,6 @@ ordenarlos por nombre o fuerza, filtrarlos por su tipo y mostrar los detalles de
 
 ### Back End:
 - Node.js, Express, Sequelize.
-- Dentro, corre la linea de comando `npm install`.
 
 ### Database:
 - PostgreSQL
