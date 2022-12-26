@@ -42,7 +42,7 @@ DB_USER=postgresuser
 DB_PASSWORD=postgrespassword
 DB_HOST=localhost
 ```
-Debes reemplazar `postgresuser` y `postgrespassword` por tus propias credeciales para conectar a la base de datos de postgreSQL. Este archivo `.env` será ignorado por github debido a que contene información sencible (las credenciales)
+Debes reemplazar `postgresuser` y `postgrespassword` por tus propias credeciales para conectar a la base de datos de postgreSQL. Este archivo `.env` será ignorado por github debido a que contene información sensible (las credenciales).
 
 ## Posteriormente
 ### _Conectar con la base de datos_
