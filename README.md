@@ -29,8 +29,8 @@ ordenarlos por nombre o fuerza, filtrarlos por su tipo y mostrar los detalles de
 
 __IMPORTANTE:__ Versiones necesarias de Node y NPM 
 
- * __Node__: 12.18.3 or superior
- * __NPM__: 6.14.16 or superior
+ * __Node__: 12.18.3 o superior
+ * __NPM__: 6.14.16 o superior
  
 ## BoilerPlate
 
