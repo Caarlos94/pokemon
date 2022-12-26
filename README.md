@@ -36,7 +36,7 @@ __IMPORTANTE:__ Versiones necesarias de Node y NPM
 
 El boilerPlate tiene dos carpetas: `api` and `client`.
 
-Denteo de `api` debes se debe crear un archivo llamado `.env` con la siguiente estructura: 
+Denteo de `api` se debe crear un archivo llamado `.env` con la siguiente estructura: 
 ```
 DB_USER=postgresuser
 DB_PASSWORD=postgrespassword
