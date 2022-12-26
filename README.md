@@ -16,6 +16,7 @@ ordenarlos por nombre o fuerza, filtrarlos por su tipo y mostrar los detalles de
 ## Capturas de Pantalla
 
 - Main
+
 ![home](https://raw.githubusercontent.com/Caarlos94/pokemon/main/client/src/img/Readme/main-Pokemon.png)
 
 - Home 
