@@ -13,6 +13,14 @@ ordenarlos por nombre o fuerza, filtrarlos por su tipo y mostrar los detalles de
 - Dentro, corre la linea de comando `npm install`.
 - Finalmente, corre la linea de comando `npm start`.
 
+## Funcionalidades
+
+- Buscar pokemons que hay en la PokeApi.
+- Muestra los detalles de cada pokemon en una sección a parte.
+- Crear pokemon nuevos a través de un formulario.
+- Sistema de ordenamiento por fuerza de ataque y por alfabeto.
+- Sistema de filtrado por su tipo o por pokemon creado.
+
 ## Capturas de Pantalla
 
 - Main
