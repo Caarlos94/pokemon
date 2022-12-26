@@ -14,4 +14,4 @@ ordenarlos por nombre o fuerza, filtrarlos por su tipo y mostrar los detalles de
 - Finalmente, corre la linea de comando `npm start`.
 
 ## Capturas de Pantalla
-![home]
+![home] https://raw.githubusercontent.com/Caarlos94/pokemon/main/client/src/img/Readme/home-Pokemon.png
