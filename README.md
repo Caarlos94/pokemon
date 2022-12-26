@@ -57,7 +57,7 @@ Debes reemplazar `postgresuser` y `postgrespassword` por tus propias credeciales
 
 ### _Corre el proyecto_
 
-- Open the project console
+- Abre la consola del proyecto
     + Dentro de la carpeta `api`, escribe la siguiente linea de comando en la consola `npm start`.
     +  Dentro de la carpeta `client`, escribe la siguiente linea de comando en la consola `npm start`.
     +  Dirigete a  http://localhost:3000/ en tu navegador favorito. 
