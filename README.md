@@ -6,6 +6,18 @@ Este es un proyecto basico consumiendo la API https://pokeapi.co/
 donde entre sus distintas funcionalidades están: buscar un pokemon por nombre, crear pokemon nuevos,
 ordenarlos por nombre o fuerza, filtrarlos por su tipo y mostrar los detalles de cada pokemon.
 
+## Stack de Tecnologías
+
+### Front End:
+- HTML, CSS, Javascript, React, Redux.
+
+### Back End:
+- Node.js, Express, Sequelize.
+- Dentro, corre la linea de comando `npm install`.
+
+### Database:
+- PostgreSQL
+
 ## Pruebalo
 
 - Clona este repositorio.
