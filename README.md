@@ -13,6 +13,5 @@ ordenarlos por nombre o fuerza, filtrarlos por su tipo y mostrar los detalles de
 - Dentro, corre la linea de comando `npm install`.
 - Finalmente, corre la linea de comando `npm start`.
 
-## Capturas de Pantalla del Proyecto
-
-https://raw.githubusercontent.com/Caarlos94/pokemon/main/client/src/img/Readme/home-Pokemon.png
+## Capturas de Pantalla
+![home]
