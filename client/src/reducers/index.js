@@ -53,16 +53,16 @@ switch(action.type){
 
     case FILTER_BY_ALPHABET:  // HACER UN FILTRO POR ORDEN ALFABETICO
     if(action.payload === "AZ"){
-        return {...state, pokemonsFilter: state.pokemons.sort((a, b)=>{
-            if (a.name > b.name) return 1;
-            if (a.name < b.name) return -1;
+        return {...state, pokemons: state.pokemons.sort((a, b)=>{
+            if (a.name.toLowerCase() > b.name.toLowerCase()) return 1;
+            if (a.name.toLowerCase() < b.name.toLowerCase()) return -1;
             return 0;
     })} 
     }
     else {
         return {...state, pokemons: state.pokemons.sort((a, b)=>{
-            if (a.name < b.name) return 1;
-            if (a.name > b.name) return -1;
+            if (a.name.toLowerCase() < b.name.toLowerCase()) return 1;
+            if (a.name.toLowerCase() > b.name.toLowerCase()) return -1;
             return 0;
         })}}
 
@@ -85,9 +85,9 @@ switch(action.type){
     if(action.payload === "All") {
         return {...state, pokemons: state.allPokemons}}
     else if(action.payload === "Ex") {
-        return {...state, pokemons: state.pokemons.filter( poke => poke.hasOwnProperty('created') !== true )}}
+        return {...state, pokemons: state.pokemonsFilter.filter( poke => poke.hasOwnProperty('created') !== true )}}
     else if(action.payload === "Cr") {
-        const pokeFilter = state.pokemons.filter(poke => poke.created === true)
+        const pokeFilter = state.pokemonsFilter.filter(poke => poke.created === true)
         return {...state, pokemons: pokeFilter, error: (pokeFilter.length === 0) ? true : null }}
 
     default:
