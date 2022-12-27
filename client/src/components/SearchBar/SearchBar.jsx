@@ -15,7 +15,7 @@ const SearchBar = ({ setRender, setPage }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    dispatch(addPokemonsByName(name));
+    dispatch(addPokemonsByName(name.toLocaleLowerCase()));
     dispatch(filterBySearch(name));
     setName("");
     setPage(1)

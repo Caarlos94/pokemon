@@ -7,7 +7,7 @@ const { getType } = require('./functions.js');
 const pokeRouter = require('./pokeRouter.js');
 
 const router = Router();
-       
+        
 // Configurar los routers
 // Ejemplo: router.use('/auth', authRouter);
 router.use('/pokemons', pokeRouter);
