@@ -56,3 +56,19 @@
     border: 2px solid #ffcb05bb;
     transition: all 0.3s;
 }
+
+@media screen and (max-width:450px) {
+    .principalContainer{
+        width: 100%;
+    }
+    
+    .detailContainer{
+        width:100%;
+        grid-template-columns: repeat(1, 100%);
+        margin: 0;
+    }
+
+    .pokeNameDetail {
+        width: 65%;
+    }
+}

@@ -21,3 +21,15 @@
     border: 2px solid #ffcb05bb;
     transition: all 0.3s;
 }
+
+@media screen and (max-width:450px) {
+    .containerOrderSearch{
+      flex-direction: column;
+      row-gap: 0.5rem;
+    }
+
+    .containerOrder{
+        height: auto;
+        padding: 0.75rem 0 0.75rem 0;
+    }
+}

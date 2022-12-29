@@ -49,7 +49,9 @@ const Home = () => {
         <NavBar></NavBar>
 
         {/* SE RENDERIZA LA IMAGEN DEL TÍTULO */}
-        <img src={pokeTitulo} alt="imagen" width={"500px"}></img>
+        <div className="imgContainer">
+          <img src={pokeTitulo} alt="imagen" className="pokeimagen"></img>
+        </div>
 
         {/* SE RENDERIZA LA SEARCHBAR */}
         <SearchBar 

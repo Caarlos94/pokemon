@@ -29,14 +29,16 @@ const SearchBar = ({ setRender, setPage }) => {
 
    return (
        <div className='containerSearch'>
-         <button className='containBoton' type="submit" onClick={() => handleClick()}>Todos</button>
          <form onSubmit={(event) => handleSubmit(event)}>
            <input className='input' type="text" autoComplete="off" value={name} placeholder="Nombre" onChange={(event) => handleChange(event)}></input>
           <button className='containBoton' type="submit">Buscar</button>
+         </form>
+         <div>
+          <button className='containBoton' type="submit" onClick={() => handleClick()}>Todos</button>
           <Link to = {"/createPokemon"}>
             <button className='containBotonCreate' type="submit">Crear</button>
           </Link>
-         </form>
+          </div>
        </div>
    );
 }

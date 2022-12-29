@@ -24,9 +24,8 @@ switch(action.type){
     case ADD_POKEMON_BY_NAME:
         if(typeof action.payload === "string") { 
            return {...state, error: true }
-        } else {
-        // antes de añadir el pokemon que busque si existe en el array de pokemons
-        // si existe que no lo añada    // si no existe que lo busque y lo añada
+        } else {    // antes de añadir el pokemon que busque si existe en el array de pokemons
+                    // si existe que no lo añada    // si no existe que lo busque y lo añada
         const pokeFilt = state.pokemons.filter(poke => poke.name === action.payload.name)
         return { ...state,  
                     pokemons: (pokeFilt.length === 0) ?([...state.pokemons, action.payload]) :([...state.pokemons]),
@@ -52,15 +51,15 @@ switch(action.type){
     return {...state, pokemons: pokeFilter, error: (pokeFilter.length === 0) ? true : null }
 
     case FILTER_BY_ALPHABET:  // HACER UN FILTRO POR ORDEN ALFABETICO
-    if(action.payload === "AZ"){
-        return {...state, pokemons: state.pokemons.sort((a, b)=>{
+    if(action.payload === "AZ"){ 
+        return {...state, allPokemons: [...state.allPokemons], pokemons: state.pokemons.sort((a, b)=>{
             if (a.name.toLowerCase() > b.name.toLowerCase()) return 1;
             if (a.name.toLowerCase() < b.name.toLowerCase()) return -1;
-            return 0;
-    })} 
+            return 0; 
+    })}
     }
     else {
-        return {...state, pokemons: state.pokemons.sort((a, b)=>{
+        return {...state, allPokemons: [...state.allPokemons], pokemons: state.pokemons.sort((a, b)=>{
             if (a.name.toLowerCase() < b.name.toLowerCase()) return 1;
             if (a.name.toLowerCase() > b.name.toLowerCase()) return -1;
             return 0;
@@ -68,14 +67,14 @@ switch(action.type){
 
     case FILTER_BY_ATTACK:
     if(action.payload === "MA"){
-        return {...state, pokemonsFilter: state.pokemons.sort((a, b)=>{
+        return {...state, allPokemons: [...state.allPokemons], pokemons: state.pokemons.sort((a, b)=>{
             if (a.attack < b.attack) return 1;
             if (a.attack > b.attack) return -1;
             return 0;
         })}
     }
     else {
-        return {...state, pokemons: state.pokemons.sort((a, b)=>{
+        return {...state, allPokemons: [...state.allPokemons], pokemons: state.pokemons.sort((a, b)=>{
             if (a.attack > b.attack) return 1;
             if (a.attack < b.attack) return -1;
             return 0; 
