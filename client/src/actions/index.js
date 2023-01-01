@@ -14,7 +14,7 @@ export const EMPTY_ERROR = "EMPTY_ERROR"
 
 export const getPokemons = () => {
     return function (dispatch) {
-        fetch(`http://localhost:3003/pokemons`)
+        fetch(`https://pokemon-production-07b2.up.railway.app/pokemons`)
         .then(response => response.json())
         .then((data) => dispatch({type: GET_POKEMON, payload: data}))
     }
@@ -22,7 +22,7 @@ export const getPokemons = () => {
 
 export const addPokemonsByName = (name) => {
     return function (dispatch) {
-        fetch(`http://localhost:3003/pokemons?name=${name}`)
+        fetch(`https://pokemon-production-07b2.up.railway.app/pokemons?name=${name}`)
         .then(response => response.json())
         .then((data) => dispatch({type: ADD_POKEMON_BY_NAME, payload: data}))
     }
@@ -30,7 +30,7 @@ export const addPokemonsByName = (name) => {
 
 export const getTypes = () => {
     return function (dispatch) {
-        fetch(`http://localhost:3003/types`)
+        fetch(`https://pokemon-production-07b2.up.railway.app/types`)
         .then(response => response.json())
         .then((data) => dispatch({type: GET_TYPES, payload: data}))
     }
@@ -38,7 +38,7 @@ export const getTypes = () => {
 
 export const getPokemonDetail = (id) => {
     return function (dispatch) {
-        fetch(`http://localhost:3003/pokemons/${id}`)
+        fetch(`https://pokemon-production-07b2.up.railway.app/pokemons/${id}`)
         .then(response => response.json())
         .then((data) => dispatch({type: GET_POKEMON_DETAIL, payload: data}))
     }
@@ -46,7 +46,7 @@ export const getPokemonDetail = (id) => {
 
 export const createPokemon = (dataForm) => {
     return function (dispatch){
-        fetch('http://localhost:3003/pokemons', {
+        fetch('https://pokemon-production-07b2.up.railway.app/pokemons', {
             method:"POST",
             headers:{
                 "Content-Type":"application/json",

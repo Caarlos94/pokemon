@@ -10,6 +10,7 @@ import axios from "axios"
 // SE LE AVISA A AXIOS QUE TODAS LAS PETICIONES QUE SE HAGAN EMPIECEN UNA MISMA BASE URL
 // axios.defaults.baseURL = "http://localhost:3001"
 // axios.defaults.baseURL = "https://pokemon-production-07b2.up.railway.app"
+//                           https://pokemonserver-a4tv.onrender.com
 
 function App() {
   return (
