@@ -11,7 +11,8 @@ import axios from "axios"
 // axios.defaults.baseURL = "http://localhost:3001"
 // axios.defaults.baseURL = "https://pokemon-production-07b2.up.railway.app"
 //                           https://pokemonserver-a4tv.onrender.com
-//                           https://pokemon-production-d92c.up.railway.app
+//                           https://pokemon-production-d92c.up.railway.app/
+
 function App() {
   return (
     <div className="App">
