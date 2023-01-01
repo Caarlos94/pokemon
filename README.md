@@ -4,7 +4,7 @@
 
 Este es un proyecto basico consumiendo la API https://pokeapi.co/
 
-Entre sus distintas funcionalidades están: buscar un pokemon por nombre, crear pokemon nuevos,
+Entre las funcionalidades de esta app están: buscar un pokemon por nombre, crear pokemon nuevos,
 ordenarlos por nombre o fuerza, filtrarlos por su tipo y mostrar los detalles de cada pokemon.
 
 ## Stack de Tecnologías
