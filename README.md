@@ -1,4 +1,4 @@
-![HenryLogo](https://images7.alphacoders.com/592/592678.jpg)
+![Logo](https://images7.alphacoders.com/592/592678.jpg)
 
 # Individual Project - Henry Pokemon
 
