@@ -67,7 +67,7 @@ Debes reemplazar `postgresuser` y `postgrespassword` por tus propias credeciales
 
 - Main
 
-![home](https://raw.githubusercontent.com/Caarlos94/pokemon/main/client/src/img/Readme/main-Pokemon.png)
+![main](https://raw.githubusercontent.com/Caarlos94/pokemon/main/client/src/img/Readme/main-Pokemon.png)
 
 - Home 
 
@@ -75,16 +75,16 @@ Debes reemplazar `postgresuser` y `postgrespassword` por tus propias credeciales
 
 - Busqueda 
 
-![home](https://raw.githubusercontent.com/Caarlos94/pokemon/main/client/src/img/Readme/search-Pokemon.png)
+![busqueda](https://raw.githubusercontent.com/Caarlos94/pokemon/main/client/src/img/Readme/search-Pokemon.png)
 
 - Formulario para Crear Pokemon
 
-![home](https://raw.githubusercontent.com/Caarlos94/pokemon/main/client/src/img/Readme/create-Pokemon.png)
+![formulario](https://raw.githubusercontent.com/Caarlos94/pokemon/main/client/src/img/Readme/create-Pokemon.png)
 
 - Pokemon Creado 
 
-![home](https://raw.githubusercontent.com/Caarlos94/pokemon/main/client/src/img/Readme/created-Pokemon.png)
+![pokemon creado](https://raw.githubusercontent.com/Caarlos94/pokemon/main/client/src/img/Readme/created-Pokemon.png)
 
 - Detalle del Pokemon
 
-![home](https://raw.githubusercontent.com/Caarlos94/pokemon/main/client/src/img/Readme/detail-Pokemon.png)
+![detalle](https://raw.githubusercontent.com/Caarlos94/pokemon/main/client/src/img/Readme/detail-Pokemon.png)
