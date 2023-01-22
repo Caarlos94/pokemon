@@ -13,7 +13,7 @@ const PokemonDetail = (props) => {
     return function(){
       dispatch(cleanPokemon())
     }
-  }, [props.match.params.id, dispatch]);
+  }, [props.match.params.id, dispatch]);  
 
   const pokemonDetail = useSelector((state) => state.pokeDetail)
 
