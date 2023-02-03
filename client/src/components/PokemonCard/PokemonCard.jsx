@@ -1,11 +1,9 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import "./PokemonCard.css"
 
-export default function PokemonCard({ name, type, img, id }) {
-  if (typeof type === "string") {
-    type = type.split(", ");
-  }
+export default function PokemonCard({ name, type, img, id, idDb }) {
+  type = type.split(", ");
+  if(!id) id = idDb 
   return (
     <Link to = {`/detail/${id}`} style={{ textDecoration: 'none' }}>
       <div className='cardContainer'>

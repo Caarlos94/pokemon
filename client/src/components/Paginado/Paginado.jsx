@@ -1,4 +1,3 @@
-import React from "react";
 import "./Paginado.css"
 
 const Paginado = ({ pokemons, pokesPerPage, fnPaginado, page }) => {

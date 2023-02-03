@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import { useDispatch, useSelector } from 'react-redux';
+import { useState } from "react";
+import { useSelector } from 'react-redux';
 import { InputCreate } from "../Styled";
-import { createPokemon, addPokemonsByName } from "../../actions"; 
 import { Link } from "react-router-dom";
+import axios from "axios"
 import "./PokemonCreate.css"
 
 const validate = (value, pokemons) => {
@@ -44,18 +44,15 @@ const validate = (value, pokemons) => {
   if (!value.img)
     errors.img = "Campo vacio";
  }
- if(value.type.length > 0) {
-  if (value.type.length === 0 || value.type.length > 2)
-    errors.type = "Maximo 2 tipos";
-    else {errors.type = false}
+ if(value.tipos.length > 0) {
+  if (value.tipos.length === 0 || value.tipos.length > 2)
+    errors.tipos = "Maximo 2 tipos";
+    else {errors.tipos = false}
  }
   return errors;
 };
 
 const PokemonCreate = () => {
-
-  const dispatch = useDispatch()
-
   const pokemons = useSelector(state => state.allPokemons)
   const tipos = useSelector(state => state.types)
 
@@ -68,7 +65,7 @@ const PokemonCreate = () => {
     height: "",
     weight: "",
     img: "",
-    type: [],
+    tipos: [],
     });
 
   const [datos, setDatos] = useState({
@@ -80,18 +77,17 @@ const PokemonCreate = () => {
     height: "",
     weight: "",
     img: "",
-    type: [],
+    tipos: [],
   });
 
-  const handleInputChange = (event) => {
-    setDatos({ ...datos, [event.target.name]: event.target.value });
-    setError(validate({...datos, [event.target.name]: event.target.value}, pokemons))
+  const handleInputChange = (e) => {
+    setDatos({ ...datos, [e.target.name]: e.target.value });
+    setError(validate({...datos, [e.target.name]: e.target.value}, pokemons))
   };
   
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    dispatch(createPokemon(datos))
-    setTimeout(() => dispatch(addPokemonsByName(datos.name)), 100);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    axios.post('pokemons', datos)
     alert("Pokemon creado") 
     setDatos({
       name: "",
@@ -102,20 +98,20 @@ const PokemonCreate = () => {
       height: "",
       weight: "",
       img: "",
-      type: [],
+      tipos: [],
     });
   };
 
-  const handlerSelected = (event) => {
-    if (!datos.type.includes(event.target.value)) {
-      setDatos({...datos, type: [...datos.type, event.target.value]})
-      setError(validate({...datos, type: [...datos.type, event.target.value]}, pokemons)) 
+  const handlerSelected = (e) => {
+    if (!datos.tipos.includes(e.target.value)) {
+      setDatos({...datos, tipos: [...datos.tipos, e.target.value]})
+      setError(validate({...datos, tipos: [...datos.tipos, e.target.value]}, pokemons)) 
     }
   };
 
   const handlerClick = (tipo) => {
-    setDatos({...datos, type: datos.type.filter(type => type !== tipo)})
-    setError(validate({...datos, type: [datos.type]}, pokemons)) 
+    setDatos({...datos, tipos: datos.tipos.filter(tipos => tipos !== tipo)})
+    setError(validate({...datos, tipos: [datos.tipos]}, pokemons)) 
   }
 
   return (
@@ -125,7 +121,7 @@ const PokemonCreate = () => {
       </div>
 
       <div className="formContainer">
-        <form className="form" onSubmit={(event) => handleSubmit(event)}>
+        <form className="form" onSubmit={handleSubmit}>
 
           <div>
             <label htmlFor="name">Nombre:</label>
@@ -135,7 +131,7 @@ const PokemonCreate = () => {
               type="text"
               id="name"
               name="name"
-              onChange={(event) => handleInputChange(event)}
+              onChange={handleInputChange}
               value={datos.name}
             ></InputCreate>
           </div>
@@ -148,7 +144,7 @@ const PokemonCreate = () => {
               type="number"
               id="life"
               name="life"
-              onChange={(event) => handleInputChange(event)}
+              onChange={handleInputChange}
               value={datos.life}
             ></InputCreate>
           </div>
@@ -162,7 +158,7 @@ const PokemonCreate = () => {
               type="number"
               id="attack"
               name="attack"
-              onChange={(event) => handleInputChange(event)}
+              onChange={handleInputChange}
               value={datos.attack}
             ></InputCreate>
           </div>
@@ -175,7 +171,7 @@ const PokemonCreate = () => {
               type="number"
               id="defense"
               name="defense"
-              onChange={(event) => handleInputChange(event)}
+              onChange={handleInputChange}
               value={datos.defense}
             ></InputCreate>
           </div>
@@ -188,7 +184,7 @@ const PokemonCreate = () => {
               type="number"
               id="speed"
               name="speed"
-              onChange={(event) => handleInputChange(event)}
+              onChange={handleInputChange}
               value={datos.speed}
             ></InputCreate>
           </div>
@@ -201,7 +197,7 @@ const PokemonCreate = () => {
               type="number"
               id="height"
               name="height"
-              onChange={(event) => handleInputChange(event)}
+              onChange={handleInputChange}
               value={datos.height}
             ></InputCreate>
           </div>
@@ -214,7 +210,7 @@ const PokemonCreate = () => {
               type="number"
               id="weight"
               name="weight"
-              onChange={(event) => handleInputChange(event)}
+              onChange={handleInputChange}
               value={datos.weight}
             ></InputCreate>
           </div>
@@ -227,7 +223,7 @@ const PokemonCreate = () => {
               type="url"
               id="img"
               name="img"
-              onChange={(event) => handleInputChange(event)}
+              onChange={handleInputChange}
               value={datos.img}
             ></InputCreate>
           </div>
@@ -239,7 +235,7 @@ const PokemonCreate = () => {
             className="orderBoton" 
             multiple={true} 
             name="type"
-            onChange={(event) => handlerSelected(event)}
+            onChange={handlerSelected}
             >
             {tipos.map((tipo) => {
                 return (
@@ -248,15 +244,15 @@ const PokemonCreate = () => {
               })}
             </select>
 
-          <button className="containerBoton" type="submit" disabled={!datos.name || !datos.type.length>0 || error.name || error.life || error.attack || error.defense || error.speed || error.height || error.weight || error.img || error.type}>Crear</button>
+          <button className="containerBoton" type="submit" disabled={!datos.name || !datos.tipos.length>0 || error.name || error.life || error.attack || error.defense || error.speed || error.height || error.weight || error.img || error.tipos}>Crear</button>
           
           </div>
-            {error.type && <p className="pStyled">{error.type}</p>}
+            {error.tipos && <p className="pStyled">{error.tipos}</p>}
 
           <div>
-            {datos.type.map(type => {
+            {datos.tipos.map(tipos => {
                 return (
-                    <button onClick={() => handlerClick(type)} key={type}>{type}</button>
+                    <button onClick={() => handlerClick(tipos)} key={tipos}>{tipos}</button>
                 )
             })}
           </div>
@@ -271,9 +267,6 @@ const PokemonCreate = () => {
       </div>
 
     </div>
-
-      
-
   );
 };
 

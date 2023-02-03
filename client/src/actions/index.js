@@ -1,3 +1,4 @@
+import axios from "axios";
 export const GET_POKEMON = "GET_POKEMON"
 export const GET_TYPES = "GET_TYPES"
 export const ADD_POKEMON_BY_NAME = "ADD_POKEMON_BY_NAME"
@@ -14,45 +15,33 @@ export const EMPTY_ERROR = "EMPTY_ERROR"
 
 export const getPokemons = () => {
     return function (dispatch) {
-        fetch(`https://pokemon94.up.railway.app/pokemons`)
-        .then(response => response.json())
+        axios.get(`pokemons`)
+        .then(response => response.data)
         .then((data) => dispatch({type: GET_POKEMON, payload: data}))
     }
 }
 
 export const addPokemonsByName = (name) => {
     return function (dispatch) {
-        fetch(`https://pokemon94.up.railway.app/pokemons?name=${name}`)
-        .then(response => response.json())
+        axios.get(`pokemons?name=${name}`)
+        .then(response => response.data)
         .then((data) => dispatch({type: ADD_POKEMON_BY_NAME, payload: data}))
     }
 }
 
 export const getTypes = () => {
     return function (dispatch) {
-        fetch(`https://pokemon94.up.railway.app/types`)
-        .then(response => response.json())
+        axios.get(`tipos`)
+        .then(response => response.data)
         .then((data) => dispatch({type: GET_TYPES, payload: data}))
     }
 }
 
 export const getPokemonDetail = (id) => {
     return function (dispatch) {
-        fetch(`https://pokemon94.up.railway.app/pokemons/${id}`)
-        .then(response => response.json())
+        axios.get(`pokemons/${id}`)
+        .then(response => response.data)
         .then((data) => dispatch({type: GET_POKEMON_DETAIL, payload: data}))
-    }
-} 
-
-export const createPokemon = (dataForm) => {
-    return function (dispatch){
-        fetch('https://pokemon94.up.railway.app/pokemons', {
-            method:"POST",
-            headers:{
-                "Content-Type":"application/json",
-            },
-            body: JSON.stringify(dataForm),
-        })
     }
 }
 

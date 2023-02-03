@@ -9,20 +9,20 @@
 }
 
 .pokeBoton {
-    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/481px-Pokebola-pokeball-png-0.png);
-    background-size: cover;
-    width: 185px;
-    height: 185px;
-    border-radius: 50%;
-    position: absolute;
-    right: 150px;
-    top: 350px;
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.85);
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/481px-Pokebola-pokeball-png-0.png);
+  background-size: cover;
+  width: 185px;
+  height: 185px;
+  border-radius: 50%;
+  position: absolute;
+  right: 150px;
+  top: 350px;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.85);
 }
 
 .pokeBoton:hover {
-    cursor: pointer;
-    width: 200px;
-    height: 200px;
-    transition: 0.5s; 
+  cursor: pointer;
+  width: 200px;
+  height: 200px;
+  transition: 0.5s; 
 }

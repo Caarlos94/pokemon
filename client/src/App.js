@@ -1,21 +1,18 @@
-import './App.css';
 import { Route } from "react-router-dom"
 import Main from './components/Main/Main';
 import Home from './components/Home/Home'
 import About from './components/About/About';
 import PokemonDetail from './components/PokemonDetail/PokemonDetail'
 import PokemonCreate from './components/PokemonCreate/PokemonCreate';
+import "./App.css"
 import axios from "axios"
 
-// SE LE AVISA A AXIOS QUE TODAS LAS PETICIONES QUE SE HAGAN EMPIECEN UNA MISMA BASE URL
-// axios.defaults.baseURL = "http://localhost:3001"
-// axios.defaults.baseURL = "https://pokemon-production-07b2.up.railway.app"
-//                           https://pokemonserver-a4tv.onrender.com
-//                           https://pokemon-production-d92c.up.railway.app/
+// axios.defaults.baseURL = "http://localhost:3000/"
+axios.defaults.baseURL = "https://pokemon94.up.railway.app/"
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Route exact path={"/"} component={Main} />
       <Route exact path={"/home"} component={Home} />
       <Route exact path={"/about"} component={About} />

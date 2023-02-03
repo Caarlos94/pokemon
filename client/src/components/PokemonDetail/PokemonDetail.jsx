@@ -32,7 +32,7 @@ const PokemonDetail = (props) => {
         <div>
             <h2 className="tituloEstadisticas">Estadisticas</h2>
             <p className="pokeNameDetail">{`Nombre: ${pokemonDetail.name}`}</p>
-            <p className="pokeNameDetail">{`Id: ${pokemonDetail.id}`}</p>
+            <p className="pokeNameDetail">{`Id: ${props.match.params.id}`}</p>
             <p className="pokeNameDetail">{`Vida: ${pokemonDetail.life}`}</p>
             <p className="pokeNameDetail">{`Ataque: ${pokemonDetail.attack}`}</p>
             <p className="pokeNameDetail">{`Defensa: ${pokemonDetail.defense}`}</p>
